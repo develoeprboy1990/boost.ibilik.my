@@ -70,7 +70,7 @@ if (!empty($_REQUEST['platform'])) {
         <p>
         <h3>Hi Welcome to Boost Ibilik!<br> Fill up the details and we will WhatsApp you shortly.</h3>
         </p>
-        <form method="post" action="https://boost.ibilik.my">
+        <form method="post" action="https://boost.ibilik.my/inquiry/add">
         <!-- <form method="post" action="http://localhost/shah/leads/boost.ibilik.my/inquiry/add"> -->
           <input type="hidden" name="platform" value="<?php echo $platform ?>">
           <div>
