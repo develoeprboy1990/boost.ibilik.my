@@ -338,7 +338,7 @@ class InquiryController extends SecureController
 				$rec_id = $this->rec_id = $db->insert($tablename, $modeldata);
 				if ($rec_id) {
 					if ($_SERVER['HTTP_REFERER'] == SITE_ADDR . 'inquiries/welcome.php') {
-						header("Location: https://api.whatsapp.com/send?phone=&text=Hi $agentname, I'm looking for Package: $package with  Coverage Area: $event_date and Total Room: $total_room.");
+						header("Location: https://api.whatsapp.com/send?phone=&text=Hi $agentname, I'm looking for Package: $package with  Coverage Area: $coverage_area and Total Room: $total_room.");
 						exit;
 					}
 					$this->set_flash_msg("Record added successfully", "success");
