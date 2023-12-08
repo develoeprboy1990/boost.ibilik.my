@@ -594,7 +594,7 @@ class BaseView
 		} else {
 			$title = Router::$page_name;
 		}
-		return 'Gglasshouse::'.$title;
+		return 'Boost Ibilik::'.$title;
 	}
 
 	/**
