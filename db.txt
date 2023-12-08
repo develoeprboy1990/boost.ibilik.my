@@ -1,0 +1,9 @@
+on 26-09-2023
+ALTER TABLE `inquiry` ADD `event_date` VARCHAR(255) NOT NULL AFTER `prospect_phone`, ADD `event_venue` VARCHAR(255) NOT NULL AFTER `event_date`, ADD `number_of_pax` VARCHAR(255) NOT NULL AFTER `event_venue`, ADD `event_type` VARCHAR(255) NOT NULL AFTER `number_of_pax`, ADD `budget` VARCHAR(255) NOT NULL AFTER `event_type`; 
+
+
+
+ALTER TABLE `inquiry` CHANGE `number_of_pax` `total_pax` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL; 
+
+
+ALTER TABLE `inquiry` ADD `status` VARCHAR(255) NULL DEFAULT NULL AFTER `handled`, ADD `total_amount` VARCHAR(255) NULL DEFAULT NULL AFTER `status`; 
