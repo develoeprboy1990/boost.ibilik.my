@@ -304,7 +304,6 @@ class InquiryController extends SecureController
 			);
 			$this->filter_vals = true; //set whether to remove empty fields
 			$modeldata = $this->modeldata = $this->validate_form($postdata);
-
 			if (1) {
 				# Statement to execute before adding record
 				$cname      = $modeldata['prospect_name'];
@@ -337,7 +336,7 @@ class InquiryController extends SecureController
 				# End of before add statement
 				$rec_id = $this->rec_id = $db->insert($tablename, $modeldata);
 				if ($rec_id) {
-					if ($_SERVER['HTTP_REFERER'] == SITE_ADDR . 'inquiries/welcome.php') {
+					if (!empty($_REQUEST['form_type'])) {
 						header("Location: https://api.whatsapp.com/send?phone=&text=Hi $agentname, I'm looking for Package: $package with  Coverage Area: $coverage_area and Total Room: $total_room.");
 						exit;
 					}

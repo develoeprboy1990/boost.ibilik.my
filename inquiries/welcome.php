@@ -73,6 +73,7 @@ if (!empty($_REQUEST['platform'])) {
         <form method="post" action="https://boost.ibilik.my/inquiry/add">
         <!-- <form method="post" action="http://localhost/shah/leads/boost.ibilik.my/inquiry/add"> -->
           <input type="hidden" name="platform" value="<?php echo $platform ?>">
+          <input type="hidden" name="form_type" value="frontend">
           <div>
             <div class="mb-3 row">
               <label for="prospect_name" class="col-sm-2 col-md-2 col-form-label">Your Name:</label>
